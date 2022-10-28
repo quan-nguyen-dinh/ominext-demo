@@ -1,0 +1,142 @@
+@media (min-width: 740px)and (max-width: 1023px) { 
+    header.header {
+        height: 85px;
+    }
+    
+    navbar.header_navbar {
+        padding: 0 24px;
+    }
+    
+    ul.navbar_list {
+        display: none;
+    }
+    
+    section.section_header {
+        padding: 0 15px;
+    }
+    
+    .section_banner {
+        margin: 0 24px;
+    }
+    
+    h2.text-c {
+        font-size: 2rem;
+    }
+    
+    h1.text-title {
+        font-size: 2.7rem;
+        margin-top: 15px;
+        white-space: pre-line;
+    }
+    
+    .grid.section_banner {
+        min-height: 450px;
+    }
+    
+    section.section_header {
+        max-height: 520px;
+    }
+    .section_banner-screen {
+        height: 294px;
+        width: 151px;
+    }
+    
+    .section_banner-phone {
+        height: 294px;
+        width: 151px;
+    }
+    
+    .top-choice {
+        padding: 0 39px;
+    }
+    
+    .container_top-choice {
+        flex-direction: column;
+    }
+    
+    .container_top-choice-left {
+        width: 100%;
+    }
+    .container_top-choice-solution {
+        width: 100%;
+    }
+    .container_top-choice-right {
+        width: 100%;
+    }
+    .section_banner-screen {
+        height: 294px;
+        width: 151px;
+    }
+    
+    .section_banner-phone {
+        height: 294px;
+        width: 151px;
+    }
+    
+    .top-choice {
+        padding: 0 39px;
+    }
+    
+    .container_top-choice {
+        flex-direction: column;
+    }
+    
+    .container_top-choice-left {
+        /* flex: 1; */
+    }
+    
+    .container_top-choice-right {
+        flex: 1;
+    }
+    
+    .container_top-choice-item {
+        margin-top: 25px;
+    }
+    
+    .container_top-choice-item-info {
+        padding: 0 15px 0 22px;
+    }
+    
+    .container_top-choice-item-info > h3 {
+        font-size: 2.8rem;
+    }
+    
+    .container_health-care {
+        /* height: auto; */
+        /* padding-bottom: 100px; */
+        /* padding-top: 60px; */
+        padding: 0;
+    }
+    
+    .container_background-top {
+        margin: 0;
+    }
+    
+    .layout_health-care {
+        flex-direction: column;
+        padding: 0 39px;
+    }
+    
+    .layout_health-care-left {
+        width: 100%;
+    }
+    
+    .layout_health-care-right {
+        width: 100%;
+    }
+    
+    .container_health-care .container_background-top {
+        padding-top: 0;
+    }
+    
+    .container_health-care-main {
+        margin-top: -71px;
+    }
+    
+    .layout_health-care-right {}
+}
+
+
+@media (max-width: 740px) {
+
+}
