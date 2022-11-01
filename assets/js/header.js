@@ -18,15 +18,15 @@ subMenu.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 300) {
         if (statusFixed) {
-            headerLanguage.style.display = "none";
+            headerLanguage.classList.add("header_language-disable")
             headerContainer.classList.add("header_fixed");
-            subMenu.style.display = "block";
+            subMenu.classList.add("navbar_submenu-show");
             statusFixed = false;
         }
     } else {
         if (!statusFixed) {
-            headerLanguage.style.display = "flex";
-            subMenu.style.display = "none";
+            headerLanguage.classList.remove("header_language-disable")
+            subMenu.classList.remove("navbar_submenu-show");
             headerContainer.classList.remove("header_fixed");
             statusFixed = true;
         }
