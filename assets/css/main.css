@@ -330,10 +330,6 @@
     margin-top: 60px;
 }
 
-.health-care-right-slide {}
-
-.slick-arrow .slick-prev {}
-
 .health-care-right-slide {
     background: #fff;
     height: auto;
@@ -344,7 +340,7 @@
 
 .slick-track {
     display: flex;
-    /* overflow: hidden; */
+    transition: 0.3s ease;
 }
 
 .health-care-right-slide-list {
@@ -934,6 +930,7 @@ div .certification-awards-item-middle {
     position: absolute;
     top: 43%;
     width: 40px;
+    cursor: pointer;
     border-radius: 50%;
     height: 40px;
     background-color: #2F78CD;
@@ -944,6 +941,9 @@ div .certification-awards-item-middle {
 
 .slick-slide-title {
     font-size: 2rem;
+    color: rgb(47, 120, 205);
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .slick-slide-content {
@@ -962,8 +962,7 @@ div .certification-awards-item-middle {
 /* BAR BOTTOM */
 
 .bar_bottom {
-    display: none;
-    /* justify-content: space-between; */
+    display: flex;
     background: #1d3857;
     position: fixed;
     bottom: 0;
@@ -1042,8 +1041,8 @@ h2.title {
 .bar_bottom-info-close>i {
     color: var(--white-color);
     font-size: 2.5rem;
-    margin-left: 10px;
-    padding-left: 20px;
+    margin-left: 30px;
+    cursor: pointer;
 }
 
 .bar_bottom-info-item-img>img {
