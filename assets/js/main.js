@@ -7,7 +7,7 @@ const btnMenu = document.querySelector(".menu-icon-btn");
 const ulMobile = document.querySelector(".navbar-nav");
 
 let countNext = 0;
-let countPrev = 5;
+let countPrev = 6;
 slickNext.addEventListener("click", () => {
     countNext++;
     if (countNext === 6) {

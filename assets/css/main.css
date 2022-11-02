@@ -328,6 +328,7 @@ a.sub_menu-link {
     background: #ecf5ff;
     text-align: center;
     width: 32%;
+    cursor: pointer;
 }
 
 .box-icon1 {
@@ -382,6 +383,16 @@ a.sub_menu-link {
     font-size: 1.6rem;
     font-weight: 700;
     white-space: pre-line;
+}
+
+.icon-b:hover>.icon-b-img {
+    transition: all 0.1s ease;
+    transform: scale(1.2);
+}
+
+.icon-b:hover>.icon-b-text {
+    transition: all 0.1s ease;
+    color: #df8f2c;
 }
 
 .layout_health-care-right {
@@ -1037,7 +1048,7 @@ div .certification-awards-item-middle {
 /* BAR BOTTOM */
 
 .bar_bottom {
-    display: flex;
+    display: none;
     background: #1d3857;
     position: fixed;
     bottom: 0;
