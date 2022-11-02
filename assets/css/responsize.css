@@ -215,6 +215,9 @@
 }
 
 @media (max-width: 740px) {
+    .bar_bottom {
+        display: none;
+    }
     .header_language {
         display: none;
     }
