@@ -4,7 +4,9 @@ const slickSlide = document.querySelector(".slick-track");
 const barBottom = document.querySelector(".bar_bottom")
 const barBottomIcon = document.querySelector(".bar_bottom-info-close-icon");
 const btnMenu = document.querySelector(".menu-icon-btn");
+
 const ulMobile = document.querySelector(".navbar-nav");
+const navCol = document.querySelector(".navbar-collapse");
 
 let countNext = 0;
 let countPrev = 6;
@@ -30,5 +32,5 @@ barBottomIcon.addEventListener("click", () => {
     barBottom.style.display = "none";
 })
 btnMenu.addEventListener("click", () => {
-    ulMobile.classList.toggle("navbar-nav-show")
+    navCol.classList.toggle("navbar-collapse-active")
 })
