@@ -21,12 +21,6 @@
         margin: 0;
         height: 60px;
     }
-    .section_header {
-        padding: 0 15px;
-    }
-    .section_banner {
-        margin: 0 24px;
-    }
     .text-c {
         font-size: 2rem;
     }
@@ -40,6 +34,7 @@
     }
     .section_header {
         max-height: 520px;
+        padding: 0 39px;
     }
     .section_banner-screen {
         height: 294px;
@@ -171,7 +166,7 @@
     .container_review-item-content {
         font-size: var(--text-font);
         line-height: 23px;
-        padding: 0;
+        padding: 0 15px;
         margin: 0 0 15px 0;
     }
     .container_review-item-img {
@@ -259,7 +254,6 @@
     .section_banner-logo {
         width: 100%;
     }
-    .section_banner-text {}
     h2.text-c {
         font-size: 2rem;
     }
@@ -501,7 +495,7 @@
     .container_review-item {
         min-width: 100%;
     }
-    p.container_review-item-content {
+    .container_review-item-content {
         font-size: var(--text-font);
         padding: 0;
         margin: 0;
@@ -518,6 +512,9 @@
         margin: 0;
         text-align: center;
         font-size: var(--text-font);
+    }
+    .container_review-carousel::after {
+        width: 0;
     }
     .container_review-item-img {
         padding: 0;
