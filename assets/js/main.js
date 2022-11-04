@@ -88,84 +88,77 @@ btnMenu.addEventListener("click", () => {
   navCol.classList.toggle("navbar-collapse-active");
 });
 
-// window.onscroll = () => scrollFunction();
+window.onscroll = () => scrollFunction();
 
-// const scrollFunction = () => {
-//     if (
-//         document.body.scrollTop > 20 ||
-//         document.documentElement.scrollTop > 20
-//     ) {
-//         btnBackToTop.style.display = 'block';
-//     } else {
-//         btnBackToTop.style.display = 'none';
-//     }
+const scrollFunction = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btnBackToTop.style.display = "block";
+  } else {
+    btnBackToTop.style.display = "none";
+  }
 
-//     //root
-//     const windowBottom = window.pageYOffset + window.innerHeight;
+  //root
+  const windowBottom = window.pageYOffset + window.innerHeight;
 
-//     //container top choice item
-//     listContainer.forEach((item) => {
-//         const itemTop = item.offsetTop + 20;
-//         if (windowBottom > itemTop) {
-//             item.classList.add('scroll-animation');
-//         } else {
-//             item.classList.remove('scroll-animation');
-//         }
-//     });
+  //container top choice item
+  listContainer.forEach((item) => {
+    const itemTop = item.offsetTop + 20;
+    if (windowBottom > itemTop) {
+      item.classList.add("scroll-animation");
+    } else {
+      item.classList.remove("scroll-animation");
+    }
+  });
 
-//     //layout health care right title
-//     windowBottom > layoutHealthCareRightTitle.offsetTop + 20 ?
-//         (layoutHealthCareRightTitle.style.animation =
-//             'container_top-choice-item-right ease 0.8s forwards') :
-//         (layoutHealthCareRightTitle.style.animation = 'none');
+  //layout health care right title
+  windowBottom > layoutHealthCareRightTitle.offsetTop + 20
+    ? (layoutHealthCareRightTitle.style.animation =
+        "fadeInRight ease 0.8s forwards")
+    : (layoutHealthCareRightTitle.style.animation = "none");
 
-//     //layout certification award
-//     windowBottom > layoutCertificationAward[0].offsetTop + 20 ?
-//         (layoutCertificationAward[0].style.animation =
-//             'container_top-choice-item-right ease 0.8s forwards') :
-//         (layoutCertificationAward[0].style.animation = 'none');
+  //layout certification award
+  windowBottom > layoutCertificationAward[0].offsetTop + 20
+    ? (layoutCertificationAward[0].style.animation =
+        "fadeInRight ease 0.8s forwards")
+    : (layoutCertificationAward[0].style.animation = "none");
 
-//     windowBottom > layoutCertificationAward[1].offsetTop + 20 ?
-//         (layoutCertificationAward[1].style.animation =
-//             'container_top-choice-item-left ease 0.8s forwards') :
-//         (layoutCertificationAward[1].style.animation = 'none');
+  windowBottom > layoutCertificationAward[1].offsetTop + 20
+    ? (layoutCertificationAward[1].style.animation =
+        "fadeInLeft ease 0.8s forwards")
+    : (layoutCertificationAward[1].style.animation = "none");
 
-//     windowBottom > layoutCertificationAward[2].offsetTop + 20 ?
-//         (layoutCertificationAward[2].style.animation =
-//             'container_top-choice-item-right ease 0.8s forwards') :
-//         (layoutCertificationAward[2].style.animation = 'none');
+  windowBottom > layoutCertificationAward[2].offsetTop + 20
+    ? (layoutCertificationAward[2].style.animation =
+        "fadeInRight ease 0.8s forwards")
+    : (layoutCertificationAward[2].style.animation = "none");
 
-//     //layout certification award sidebar
-//     windowBottom > layoutCertificationAwardSideBar.offsetTop + 20 ?
-//         (layoutCertificationAwardSideBar.style.animation =
-//             'container_top-choice-item-left ease 0.8s forwards') :
-//         (layoutCertificationAwardSideBar.style.animation = 'none');
+  //layout certification award sidebar
+  windowBottom > layoutCertificationAwardSideBar.offsetTop + 20
+    ? (layoutCertificationAwardSideBar.style.animation =
+        "fadeInLeft ease 0.8s forwards")
+    : (layoutCertificationAwardSideBar.style.animation = "none");
 
-//     //container partner item
-//     containerPartnerItem.forEach((item, index) => {
-//         if (windowBottom > item.offsetTop + 20) {
-//             if (index % 2 === 0) {
-//                 item.style.animation =
-//                     'container_top-choice-item-right ease 0.8s forwards';
-//             } else {
-//                 item.style.animation =
-//                     'container_top-choice-item-left ease 0.8s forwards';
-//             }
-//         } else {
-//             item.style.animation = 'none';
-//         }
-//     });
+  //container partner item
+  containerPartnerItem.forEach((item, index) => {
+    if (windowBottom > item.offsetTop + 20) {
+      if (index % 2 === 0) {
+        item.style.animation = "fadeInRight ease 0.8s forwards";
+      } else {
+        item.style.animation = "fadeInLeft ease 0.8s forwards";
+      }
+    } else {
+      item.style.animation = "none";
+    }
+  });
 
-//     windowBottom > footerItem[0].offsetTop ?
-//         (footerItem[0].style.animation =
-//             'container_top-choice-item-left ease 0.8s forwards') :
-//         (footerItem[0].style.animation = 'none');
+  windowBottom > footerItem[0].offsetTop
+    ? (footerItem[0].style.animation = "fadeInLeft ease 0.8s forwards")
+    : (footerItem[0].style.animation = "none");
 
-//     windowBottom > footerItem[1].offsetTop ?
-//         (footerItem[1].style.animation =
-//             'container_top-choice-item-right ease 0.8s forwards') :
-//         (footerItem[1].style.animation = 'none');
-// };
+  windowBottom > footerItem[1].offsetTop
+    ? (footerItem[1].style.animation = "fadeInRight ease 0.8s forwards")
+    : (footerItem[1].style.animation = "none");
+};
 
 btnBackToTop.addEventListener("click", () => {
   document.body.scrollTop = 0;
@@ -201,4 +194,17 @@ btnDropDown.addEventListener("click", () => {
 
 subMenu.addEventListener("click", () => {
   subMenuList.classList.toggle("navbar_submenu-list-show");
+});
+
+const slider = document.querySelector(".slick-track");
+
+slider.addEventListener("mousedown", (e) => {
+
+});
+slider.addEventListener("mouseleave", () => {
+});
+slider.addEventListener("mouseup", () => {
+});
+slider.addEventListener("mousemove", (e) => {
+
 });
