@@ -1279,6 +1279,7 @@ h2.title {
 
 .container_review-list {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     transition: all 0.5s ease 0s;
 }
@@ -1297,7 +1298,7 @@ h2.title {
     font-size: 2.8rem;
     word-break: break-word;
     word-spacing: 4px;
-    padding-right: 102px;
+    padding: 0 34px;
     margin-right: 49px;
     white-space: pre-line;
 }
@@ -1332,14 +1333,15 @@ h2.title {
     content: "";
 }
 
+
+/* .container_review-item:nth-child(1),
 .container_review-item:nth-child(2) {
     border-left: 3px solid #EEEEEE;
     padding-left: 34px;
-    /* margin-bottom: -24px; */
-}
+} */
 
-.container_review-item:nth-child(2) .container_review-item-img>img {
-    height: 80px;
+.container_review-item:nth-child(1) {
+    border-rigri: 3px solid #EEEEEE;
 }
 
 .container_review-item-img>img {
@@ -1406,5 +1408,16 @@ h2.title {
     overflow: hidden;
     display: flex;
     justify-content: flex-start;
-    /* //position: relative; */
+    position: relative;
+}
+
+.container_review-carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background-color: #EEEEEE;
 }
