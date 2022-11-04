@@ -279,44 +279,29 @@ a.sub_menu-link {
     transition: all 0.3s ease;
 }
 
-.container_top-choice-item-scroll-animation {
-    animation: container_top-choice-item-right ease 1.3s forwards;
+.container_top-choice-item.scroll-animation {
+    animation-name: fadeInRight;
+    animation-duration: 1s;
 }
-
-.right-back-slow {
-    animation: rigthBackSlow ease 1.2s forwards;
-}
-
-@keyframes container_top-choice-item-right {
-    from {
-        transform: translateX(200px);
+@keyframes fadeInRight{
+    from{
         opacity: 0;
+        transform: translateX(20px);
     }
-    to {
-        transform: translateX(0);
+    to{
         opacity: 1;
+        transform: translateX(0);
     }
 }
 
-@keyframes rigthBackSlow {
-    from {
-        transform: translateX(15%);
+@keyframes fadeInLeft {
+    from{
         opacity: 0;
+        transform: translateX(-20px);
     }
-    to {
-        transform: translateX(0);
+    to{
         opacity: 1;
-    }
-}
-
-@keyframes container_top-choice-item-left {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
+      transform: translateX(0);
     }
 }
 
