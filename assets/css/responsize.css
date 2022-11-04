@@ -216,7 +216,10 @@
 
 @media (max-width: 740px) {
     .header_fixed {
-        height: 70px !important;
+        height: 85px !important;
+    }
+    .header_container {
+        padding: 8px 16px;
     }
     .bar_bottom {
         display: none;
