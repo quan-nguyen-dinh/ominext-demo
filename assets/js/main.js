@@ -61,13 +61,9 @@ btnMenu.addEventListener("click", () => {
 
 let statusFixed = true;
 
-window.scroll = () => scrollFunction();
-
-const scrollFunction = () => {
-  //root
-  const windowBottom = window.pageYOffset + window.innerHeight;
+window.addEventListener("scroll", () => {
   //header
-  if (windowBottom > 300) {
+  if (window.pageYOffset > 100) {
     if (statusFixed) {
       headerLanguage.classList.add("header_language-disable");
       headerContainer.classList.add("header_fixed");
@@ -82,22 +78,26 @@ const scrollFunction = () => {
       statusFixed = true;
     }
   }
+  scrollFunction();
+});
 
-  if (windowBottom > 300) {
+const scrollFunction = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     btnBackToTop.style.display = "block";
   } else {
     btnBackToTop.style.display = "none";
   }
-
-  //container top choice item
-  //   listContainer.forEach((item) => {
-  //     const itemTop = item.offsetTop + 20;
-  //     if (windowBottom > itemTop) {
-  //       item.classList.add("scroll-animation");
-  //     } else {
-  //       item.classList.remove("scroll-animation");
-  //     }
-  //   });
+  //root
+  // const windowBottom = window.pageYOffset + window.innerHeight;
+  // // container top choice item
+  // listContainer.forEach((item) => {
+  //   const itemTop = item.offsetTop + 20;
+  //   if (windowBottom > itemTop) {
+  //     item.classList.add("scroll-animation");
+  //   } else {
+  //     item.classList.remove("scroll-animation");
+  //   }
+  // });
 
   //   //layout health care right title
   //   windowBottom > layoutHealthCareRightTitle.offsetTop + 20
