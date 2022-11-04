@@ -56,12 +56,11 @@ barBottomIcon.addEventListener("click", () => {
   barBottom.style.display = "none";
 });
 btnMenu.addEventListener("click", () => {
-  console.log("Hello world");
+  console.log("HIHI")
   navCol.classList.toggle("navbar-collapse-active");
 });
 
 let statusFixed = true;
-
 window.addEventListener("scroll", () => {
   //header
   if (window.pageYOffset > 100) {
@@ -72,20 +71,26 @@ window.addEventListener("scroll", () => {
       statusFixed = false;
     }
 
-    if (windowBottom > 300) {
-      btnBackToTop.style.display = "block";
-    } else {
-      btnBackToTop.style.display = "none";
-    }
+    
   }
+  else {
+    if (!statusFixed) {
+        headerLanguage.classList.remove("header_language-disable")
+        subMenu.classList.remove("navbar_submenu-show");
+        headerContainer.classList.remove("header_fixed");
+        statusFixed = true;
+    }
+}
   scrollFunction();
+  if (window.pageYOffset > 300) {
+    btnBackToTop.style.display = "block";
+  } else {
+    btnBackToTop.style.display = "none";
+  }
 });
 
 barBottomIcon.addEventListener("click", () => {
   barBottom.style.display = "none";
-});
-btnMenu.addEventListener("click", () => {
-  navCol.classList.toggle("navbar-collapse-active");
 });
 
 window.onscroll = () => scrollFunction();
@@ -155,7 +160,7 @@ const scrollFunction = () => {
     ? (footerItem[0].style.animation = "fadeInLeft ease 0.8s forwards")
     : (footerItem[0].style.animation = "none");
 
-  windowBottom > footerItem[1].offsetTop
+  windowBottom > footerItem[1].offsetTop 
     ? (footerItem[1].style.animation = "fadeInRight ease 0.8s forwards")
     : (footerItem[1].style.animation = "none");
 };
@@ -188,13 +193,8 @@ subMenu.addEventListener("click", () => {
   subMenuList.classList.toggle("navbar_submenu-list-show");
 });
 
-btnDropDown.addEventListener("click", () => {
-  menuLanguage.classList.toggle("dropdown-menu-show");
-});
 
-subMenu.addEventListener("click", () => {
-  subMenuList.classList.toggle("navbar_submenu-list-show");
-});
+
 
 const slider = document.querySelector(".slick-track");
 
