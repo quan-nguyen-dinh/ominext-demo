@@ -143,69 +143,10 @@ btnScrollTopFooter.addEventListener('click', () => {
 });
 
 
-const itemChoice = document.querySelectorAll(".container_top-choice-item");
-const titleHealth = document.querySelector(".layout_health-care-right-title");
-const track = document.querySelector(".health-care-right-slide")
-
-let offsetChoice = itemChoice[0].offsetTop - 500;
-let offsetHealth = titleHealth.offsetTop - 750;
-let offsetTrack = track.offsetTop - 800;
-console.log("track off set : ", track.offsetTop);
-console.log("offsetTrack : ", offsetTrack)
-    //* header.js 
-const btnDropDown = document.querySelector(".header_dropdown-language");
-const menuLanguage = document.querySelector(".dropdown-menu");
-const subMenu = document.querySelector(".navbar_submenu");
-const subMenuList = document.querySelector(".navbar_submenu-list");
-const headerLanguage = document.querySelector(".header_language");
-const headerContainer = document.querySelector(".header_container");
-let statusFixed = true;
-
 btnDropDown.addEventListener("click", () => {
-    console.log("hello");
     menuLanguage.classList.toggle("dropdown-menu-show");
 });
 
 subMenu.addEventListener("click", () => {
     subMenuList.classList.toggle("navbar_submenu-list-show");
 });
-
-//* the end
-//* the hover action`
-const box = document.querySelectorAll(".icon-b");
-
-for (let i = 0; i < box.length; ++i) {
-    box[i].addEventListener("mouseover", () => {
-        console.log("Hello")
-        slickSlide.style.transform = "translate3d(" + -610 * box[i].getAttribute("data-tab") + "px, 0px, 0px)";
-    })
-}
-
-window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 300) {
-        if (statusFixed) {
-            headerLanguage.classList.add("header_language-disable")
-            headerContainer.classList.add("header_fixed");
-            subMenu.classList.add("navbar_submenu-show");
-            statusFixed = false;
-        }
-    } else {
-        if (!statusFixed) {
-            headerLanguage.classList.remove("header_language-disable")
-            subMenu.classList.remove("navbar_submenu-show");
-            headerContainer.classList.remove("header_fixed");
-            statusFixed = true;
-        }
-    }
-    console.log("page : ", window.pageYOffset)
-    if (window.pageYOffset > offsetChoice) {
-        for (let i = 0; i < itemChoice.length; ++i)
-            itemChoice[i].classList.add("container_top-choice-item-scroll-animation");
-    }
-    if (window.pageYOffset > offsetHealth) {
-        titleHealth.classList.add("right-back-slow")
-    }
-    // if (window.pageYOffset > offsetTrack) {
-    //     track.classList.add("right-back-slow")
-    // }
-})

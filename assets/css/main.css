@@ -1,3 +1,8 @@
+.wrapper {
+    overflow-y: hidden;
+    position: relative;
+}
+
 .back-to-top {
     position: fixed;
     background: var(--white-color);
@@ -296,7 +301,7 @@ a.sub_menu-link {
 
 @keyframes rigthBackSlow {
     from {
-        transform: translateX(100px);
+        transform: translateX(15%);
         opacity: 0;
     }
     to {
