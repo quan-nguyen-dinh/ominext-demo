@@ -3,7 +3,7 @@ const btnRight = document.querySelector(".btn-right");
 const carousel = document.querySelector(".container_review-carousel");
 const reviewList = document.querySelector('.container_review-list');
 
-var direction;
+let  direction = 0;
 
 btnLeft.addEventListener("click", () => {
     if (direction === -1) {
@@ -20,14 +20,11 @@ btnRight.addEventListener('click', () => {
 })
 reviewList.addEventListener("transitionend", () => {
     console.log("Hello word", reviewList.firstElementChild)
-        //! slider sẽ thêm element đầu tiên vào cuối  cùng của slider
     if (direction === -1) {
         reviewList.appendChild(reviewList.firstElementChild);
 
     } else if (direction === 1) {
-        reviewList.prepend(reviewList.lastElementChild)
-    }
-    //! dòng này có tác dụng reset transform về 0, và do đó thì
+        reviewList.prepend(reviewList.lastElementChild)    }
     reviewList.style.transition = 'none';
     reviewList.style.transform = 'translate(0)';
     setTimeout(function() {
