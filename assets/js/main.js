@@ -56,7 +56,8 @@ barBottomIcon.addEventListener("click", () => {
   barBottom.style.display = "none";
 });
 btnMenu.addEventListener("click", () => {
-  ulMobile.classList.toggle("navbar-collapse-active");
+  console.log("Hello world");
+  navCol.classList.toggle("navbar-collapse-active");
 });
 
 let statusFixed = true;
@@ -70,12 +71,11 @@ window.addEventListener("scroll", () => {
       subMenu.classList.add("navbar_submenu-show");
       statusFixed = false;
     }
-  } else {
-    if (!statusFixed) {
-      headerLanguage.classList.remove("header_language-disable");
-      subMenu.classList.remove("navbar_submenu-show");
-      headerContainer.classList.remove("header_fixed");
-      statusFixed = true;
+
+    if (windowBottom > 300) {
+      btnBackToTop.style.display = "block";
+    } else {
+      btnBackToTop.style.display = "none";
     }
   }
   scrollFunction();
@@ -198,13 +198,7 @@ subMenu.addEventListener("click", () => {
 
 const slider = document.querySelector(".slick-track");
 
-slider.addEventListener("mousedown", (e) => {
-
-});
-slider.addEventListener("mouseleave", () => {
-});
-slider.addEventListener("mouseup", () => {
-});
-slider.addEventListener("mousemove", (e) => {
-
-});
+slider.addEventListener("mousedown", (e) => {});
+slider.addEventListener("mouseleave", () => {});
+slider.addEventListener("mouseup", () => {});
+slider.addEventListener("mousemove", (e) => {});
