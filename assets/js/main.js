@@ -25,6 +25,7 @@ const containerPartnerItem = document.querySelectorAll(
     '.container_partners-item ',
 );
 
+
 let countNext = 0;
 let countPrev = 6;
 slickNext.addEventListener('click', () => {
