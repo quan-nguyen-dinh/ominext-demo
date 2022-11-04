@@ -5,9 +5,11 @@ const barBottom = document.querySelector('.bar_bottom');
 const barBottomIcon = document.querySelector('.bar_bottom-info-close-icon');
 const btnMenu = document.querySelector('.menu-icon-btn');
 const ulMobile = document.querySelector('.navbar-nav');
+const navCol = document.querySelector('.navbar-collapse');
 const btnBackToTop = document.querySelector('.back-to-top');
 const btnScrollTopFooter = document.querySelector('.scroll-top-btn');
 const listContainer = document.querySelectorAll('.container_top-choice-item');
+const footerItem = document.querySelectorAll('.footer_head-item');
 const layoutHealthCareRightTitle = document.querySelector(
     '.layout_health-care-right-title',
 );
@@ -22,8 +24,6 @@ const layoutCertificationAwardSideBar = document.querySelector(
 const containerPartnerItem = document.querySelectorAll(
     '.container_partners-item ',
 );
-
-const footerItem = document.querySelectorAll('.footer_head-item');
 
 let countNext = 0;
 let countPrev = 6;
@@ -49,7 +49,7 @@ barBottomIcon.addEventListener('click', () => {
     barBottom.style.display = 'none';
 });
 btnMenu.addEventListener('click', () => {
-    ulMobile.classList.toggle('navbar-nav-show');
+    ulMobile.classList.toggle('navbar-collapse-active');
 });
 
 window.onscroll = () => scrollFunction();
