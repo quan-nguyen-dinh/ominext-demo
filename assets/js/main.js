@@ -50,87 +50,87 @@ barBottomIcon.addEventListener('click', () => {
     barBottom.style.display = 'none';
 });
 btnMenu.addEventListener('click', () => {
-    ulMobile.classList.toggle('navbar-collapse-active');
+    navCol.classList.toggle('navbar-collapse-active');
 });
 
-window.onscroll = () => scrollFunction();
+// window.onscroll = () => scrollFunction();
 
-const scrollFunction = () => {
-    if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-    ) {
-        btnBackToTop.style.display = 'block';
-    } else {
-        btnBackToTop.style.display = 'none';
-    }
+// const scrollFunction = () => {
+//     if (
+//         document.body.scrollTop > 20 ||
+//         document.documentElement.scrollTop > 20
+//     ) {
+//         btnBackToTop.style.display = 'block';
+//     } else {
+//         btnBackToTop.style.display = 'none';
+//     }
 
-    //root
-    const windowBottom = window.pageYOffset + window.innerHeight;
+//     //root
+//     const windowBottom = window.pageYOffset + window.innerHeight;
 
-    //container top choice item
-    listContainer.forEach((item) => {
-        const itemTop = item.offsetTop + 20;
-        if (windowBottom > itemTop) {
-            item.classList.add('scroll-animation');
-        } else {
-            item.classList.remove('scroll-animation');
-        }
-    });
+//     //container top choice item
+//     listContainer.forEach((item) => {
+//         const itemTop = item.offsetTop + 20;
+//         if (windowBottom > itemTop) {
+//             item.classList.add('scroll-animation');
+//         } else {
+//             item.classList.remove('scroll-animation');
+//         }
+//     });
 
-    //layout health care right title
-    windowBottom > layoutHealthCareRightTitle.offsetTop + 20
-        ? (layoutHealthCareRightTitle.style.animation =
-              'container_top-choice-item-right ease 0.8s forwards')
-        : (layoutHealthCareRightTitle.style.animation = 'none');
+//     //layout health care right title
+//     windowBottom > layoutHealthCareRightTitle.offsetTop + 20 ?
+//         (layoutHealthCareRightTitle.style.animation =
+//             'container_top-choice-item-right ease 0.8s forwards') :
+//         (layoutHealthCareRightTitle.style.animation = 'none');
 
-    //layout certification award
-    windowBottom > layoutCertificationAward[0].offsetTop + 20
-        ? (layoutCertificationAward[0].style.animation =
-              'container_top-choice-item-right ease 0.8s forwards')
-        : (layoutCertificationAward[0].style.animation = 'none');
+//     //layout certification award
+//     windowBottom > layoutCertificationAward[0].offsetTop + 20 ?
+//         (layoutCertificationAward[0].style.animation =
+//             'container_top-choice-item-right ease 0.8s forwards') :
+//         (layoutCertificationAward[0].style.animation = 'none');
 
-    windowBottom > layoutCertificationAward[1].offsetTop + 20
-        ? (layoutCertificationAward[1].style.animation =
-              'container_top-choice-item-left ease 0.8s forwards')
-        : (layoutCertificationAward[1].style.animation = 'none');
+//     windowBottom > layoutCertificationAward[1].offsetTop + 20 ?
+//         (layoutCertificationAward[1].style.animation =
+//             'container_top-choice-item-left ease 0.8s forwards') :
+//         (layoutCertificationAward[1].style.animation = 'none');
 
-    windowBottom > layoutCertificationAward[2].offsetTop + 20
-        ? (layoutCertificationAward[2].style.animation =
-              'container_top-choice-item-right ease 0.8s forwards')
-        : (layoutCertificationAward[2].style.animation = 'none');
+//     windowBottom > layoutCertificationAward[2].offsetTop + 20 ?
+//         (layoutCertificationAward[2].style.animation =
+//             'container_top-choice-item-right ease 0.8s forwards') :
+//         (layoutCertificationAward[2].style.animation = 'none');
 
-    //layout certification award sidebar
-    windowBottom > layoutCertificationAwardSideBar.offsetTop + 20
-        ? (layoutCertificationAwardSideBar.style.animation =
-              'container_top-choice-item-left ease 0.8s forwards')
-        : (layoutCertificationAwardSideBar.style.animation = 'none');
+//     //layout certification award sidebar
+//     windowBottom > layoutCertificationAwardSideBar.offsetTop + 20 ?
+//         (layoutCertificationAwardSideBar.style.animation =
+//             'container_top-choice-item-left ease 0.8s forwards') :
+//         (layoutCertificationAwardSideBar.style.animation = 'none');
 
-    //container partner item
-    containerPartnerItem.forEach((item, index) => {
-        if (windowBottom > item.offsetTop + 20) {
-            if (index % 2 === 0) {
-                item.style.animation =
-                    'container_top-choice-item-right ease 0.8s forwards';
-            } else {
-                item.style.animation =
-                    'container_top-choice-item-left ease 0.8s forwards';
-            }
-        } else {
-            item.style.animation = 'none';
-        }
-    });
+//     //container partner item
+//     containerPartnerItem.forEach((item, index) => {
+//         if (windowBottom > item.offsetTop + 20) {
+//             if (index % 2 === 0) {
+//                 item.style.animation =
+//                     'container_top-choice-item-right ease 0.8s forwards';
+//             } else {
+//                 item.style.animation =
+//                     'container_top-choice-item-left ease 0.8s forwards';
+//             }
+//         } else {
+//             item.style.animation = 'none';
+//         }
+//     });
 
-    windowBottom > footerItem[0].offsetTop
-        ? (footerItem[0].style.animation =
-              'container_top-choice-item-left ease 0.8s forwards')
-        : (footerItem[0].style.animation = 'none');
+//     windowBottom > footerItem[0].offsetTop ?
+//         (footerItem[0].style.animation =
+//             'container_top-choice-item-left ease 0.8s forwards') :
+//         (footerItem[0].style.animation = 'none');
 
-    windowBottom > footerItem[1].offsetTop
-        ? (footerItem[1].style.animation =
-              'container_top-choice-item-right ease 0.8s forwards')
-        : (footerItem[1].style.animation = 'none');
-};
+//     windowBottom > footerItem[1].offsetTop ?
+//         (footerItem[1].style.animation =
+//             'container_top-choice-item-right ease 0.8s forwards') :
+//         (footerItem[1].style.animation = 'none');
+// };
 
 btnBackToTop.addEventListener('click', () => {
     document.body.scrollTop = 0;
@@ -141,3 +141,71 @@ btnScrollTopFooter.addEventListener('click', () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 });
+
+
+const itemChoice = document.querySelectorAll(".container_top-choice-item");
+const titleHealth = document.querySelector(".layout_health-care-right-title");
+const track = document.querySelector(".health-care-right-slide")
+
+let offsetChoice = itemChoice[0].offsetTop - 500;
+let offsetHealth = titleHealth.offsetTop - 750;
+let offsetTrack = track.offsetTop - 800;
+console.log("track off set : ", track.offsetTop);
+console.log("offsetTrack : ", offsetTrack)
+    //* header.js 
+const btnDropDown = document.querySelector(".header_dropdown-language");
+const menuLanguage = document.querySelector(".dropdown-menu");
+const subMenu = document.querySelector(".navbar_submenu");
+const subMenuList = document.querySelector(".navbar_submenu-list");
+const headerLanguage = document.querySelector(".header_language");
+const headerContainer = document.querySelector(".header_container");
+let statusFixed = true;
+
+btnDropDown.addEventListener("click", () => {
+    console.log("hello");
+    menuLanguage.classList.toggle("dropdown-menu-show");
+});
+
+subMenu.addEventListener("click", () => {
+    subMenuList.classList.toggle("navbar_submenu-list-show");
+});
+
+//* the end
+//* the hover action`
+const box = document.querySelectorAll(".icon-b");
+
+for (let i = 0; i < box.length; ++i) {
+    box[i].addEventListener("mouseover", () => {
+        console.log("Hello")
+        slickSlide.style.transform = "translate3d(" + -610 * box[i].getAttribute("data-tab") + "px, 0px, 0px)";
+    })
+}
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+        if (statusFixed) {
+            headerLanguage.classList.add("header_language-disable")
+            headerContainer.classList.add("header_fixed");
+            subMenu.classList.add("navbar_submenu-show");
+            statusFixed = false;
+        }
+    } else {
+        if (!statusFixed) {
+            headerLanguage.classList.remove("header_language-disable")
+            subMenu.classList.remove("navbar_submenu-show");
+            headerContainer.classList.remove("header_fixed");
+            statusFixed = true;
+        }
+    }
+    console.log("page : ", window.pageYOffset)
+    if (window.pageYOffset > offsetChoice) {
+        for (let i = 0; i < itemChoice.length; ++i)
+            itemChoice[i].classList.add("container_top-choice-item-scroll-animation");
+    }
+    if (window.pageYOffset > offsetHealth) {
+        titleHealth.classList.add("right-back-slow")
+    }
+    // if (window.pageYOffset > offsetTrack) {
+    //     track.classList.add("right-back-slow")
+    // }
+})
