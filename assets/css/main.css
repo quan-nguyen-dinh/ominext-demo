@@ -1098,7 +1098,7 @@ div .certification-awards-item-middle {
 /* BAR BOTTOM */
 
 .bar_bottom {
-    display: none;
+    display: flex;
     background: #1d3857;
     position: fixed;
     bottom: 0;
