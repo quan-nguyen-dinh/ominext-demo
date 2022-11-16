@@ -29,7 +29,6 @@ const layoutCertificationAwardSideBar = document.querySelector(
 const containerPartnerItem = document.querySelectorAll(
   ".container_partners-item "
 );
-
 let countNext = 0;
 let countPrev = 6;
 slickNext.addEventListener("click", () => {
@@ -50,6 +49,7 @@ slickPrev.addEventListener("click", () => {
   slickSlide.style.transform = "translate3d(" + dem + "px, 0px, 0px)";
 });
 
+console.log("barBottom ", barBottomIcon)
 barBottomIcon.addEventListener("click", () => {
   barBottom.style.display = "none";
 });
@@ -84,9 +84,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-barBottomIcon.addEventListener("click", () => {
-  barBottom.style.display = "none";
-});
 
 window.onscroll = () => scrollFunction();
 
